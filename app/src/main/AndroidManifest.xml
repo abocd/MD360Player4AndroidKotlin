@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.asha.md360player4android">
+    package="com.xiuhu.xiuhuvrplayerandroid">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -12,16 +12,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DemoActivity" android:configChanges="screenSize|orientation" android:screenOrientation="landscape">
+        <activity android:name="com.xiuhu.xiuhuvrplayerandroid.DemoActivity" android:configChanges="screenSize|orientation" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:label="IjkPlayerDemoActivity" android:name=".IjkPlayerDemoActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
-        <activity android:label="VideoPlayerActivity" android:name=".VideoPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
-        <activity android:label="NormalVideoPlayerActivity" android:name=".NormalVideoPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
-        <activity android:label="BitmapPlayerActivity" android:name=".BitmapPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
+        <activity android:label="IjkPlayerDemoActivity" android:name="com.xiuhu.xiuhuvrplayerandroid.IjkPlayerDemoActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
+        <activity android:label="VideoPlayerActivity" android:name="com.xiuhu.xiuhuvrplayerandroid.VideoPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
+        <activity android:label="NormalVideoPlayerActivity" android:name="com.xiuhu.xiuhuvrplayerandroid.NormalVideoPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
+        <activity android:label="BitmapPlayerActivity" android:name="com.xiuhu.xiuhuvrplayerandroid.BitmapPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
     </application>
 
 </manifest>
