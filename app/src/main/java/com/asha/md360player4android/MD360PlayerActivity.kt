@@ -154,18 +154,18 @@ abstract class MD360PlayerActivity : Activity() {
             Toast.makeText(this@MD360PlayerActivity, "add plugin position:" + position, Toast.LENGTH_SHORT).show()
         }
 
-        findViewById(R.id.button_add_plugin_logo).setOnClickListener {
-            val builder = MDHotspotBuilder.create(mImageLoadProvider)
-                    .size(4f, 4f)
-                    .provider(activity, R.drawable.moredoo_logo)
-                    .title("logo")
-                    .position(logoPosition)
-                    .listenClick { hitHotspot, ray -> Toast.makeText(this@MD360PlayerActivity, "click logo", Toast.LENGTH_SHORT).show() }
-            val hotspot = MDSimpleHotspot(builder)
-            plugins.add(hotspot)
-            vrLibrary!!.addPlugin(hotspot)
-            Toast.makeText(this@MD360PlayerActivity, "add plugin logo", Toast.LENGTH_SHORT).show()
-        }
+//        findViewById(R.id.button_add_plugin_logo).setOnClickListener {
+//            val builder = MDHotspotBuilder.create(mImageLoadProvider)
+//                    .size(4f, 4f)
+//                    .provider(activity, R.drawable.moredoo_logo)
+//                    .title("logo")
+//                    .position(logoPosition)
+//                    .listenClick { hitHotspot, ray -> Toast.makeText(this@MD360PlayerActivity, "click logo", Toast.LENGTH_SHORT).show() }
+//            val hotspot = MDSimpleHotspot(builder)
+//            plugins.add(hotspot)
+//            vrLibrary!!.addPlugin(hotspot)
+//            Toast.makeText(this@MD360PlayerActivity, "add plugin logo", Toast.LENGTH_SHORT).show()
+//        }
 
         findViewById(R.id.button_remove_plugin).setOnClickListener {
             if (plugins.size > 0) {
@@ -179,18 +179,18 @@ abstract class MD360PlayerActivity : Activity() {
             vrLibrary!!.removePlugins()
         }
 
-        findViewById(R.id.button_add_hotspot_front).setOnClickListener {
-            val builder = MDHotspotBuilder.create(mImageLoadProvider)
-                    .size(4f, 4f)
-                    .provider(activity, R.drawable.moredoo_logo)
-                    .title("front logo")
-                    .tag("tag-front")
-                    .position(MDPosition.newInstance().setZ(-12.0f).setY(-1.0f))
-            val hotspot = MDSimpleHotspot(builder)
-            hotspot.rotateToCamera()
-            plugins.add(hotspot)
-            vrLibrary!!.addPlugin(hotspot)
-        }
+//        findViewById(R.id.button_add_hotspot_front).setOnClickListener {
+//            val builder = MDHotspotBuilder.create(mImageLoadProvider)
+//                    .size(4f, 4f)
+//                    .provider(activity, R.drawable.moredoo_logo)
+//                    .title("front logo")
+//                    .tag("tag-front")
+//                    .position(MDPosition.newInstance().setZ(-12.0f).setY(-1.0f))
+//            val hotspot = MDSimpleHotspot(builder)
+//            hotspot.rotateToCamera()
+//            plugins.add(hotspot)
+//            vrLibrary!!.addPlugin(hotspot)
+//        }
 
         findViewById(R.id.button_rotate_to_camera_plugin).setOnClickListener {
             val hotspot = vrLibrary!!.findHotspotByTag("tag-front")
@@ -412,7 +412,7 @@ abstract class MD360PlayerActivity : Activity() {
 
     companion object {
 
-        private val TAG = "MD360PlayerActivity"
+        private val TAG = "XiuhuVrPlayer"
 
         private val sDisplayMode = SparseArray<String>()
         private val sInteractiveMode = SparseArray<String>()
@@ -453,6 +453,10 @@ abstract class MD360PlayerActivity : Activity() {
 
             sFlingEnabled.put(1, "FLING ENABLED")
             sFlingEnabled.put(0, "FLING DISABLED")
+        }
+
+        fun startNormalVideo(context: Context, uri: Uri) {
+            start(context, uri, NormalVideoPlayerActivity::class.java)
         }
 
         fun startVideo(context: Context, uri: Uri) {

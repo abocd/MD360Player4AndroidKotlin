@@ -20,6 +20,7 @@
         </activity>
         <activity android:label="IjkPlayerDemoActivity" android:name=".IjkPlayerDemoActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
         <activity android:label="VideoPlayerActivity" android:name=".VideoPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
+        <activity android:label="NormalVideoPlayerActivity" android:name=".NormalVideoPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
         <activity android:label="BitmapPlayerActivity" android:name=".BitmapPlayerActivity" android:screenOrientation="landscape" android:configChanges="screenSize|orientation" />
     </application>
 

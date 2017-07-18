@@ -259,6 +259,7 @@
 
 
    <LinearLayout
+           android:id="@+id/plugin_layout4"
        android:layout_below="@id/plugin_layout3"
        android:layout_marginTop="8dp"
        android:orientation="horizontal"
@@ -307,5 +308,44 @@
        android:id="@+id/progress"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content" />
+
+
+   <LinearLayout
+           android:id="@+id/layout_ctrl"
+           android:layout_below="@id/layout_ctrl"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentRight="true"
+           android:layout_marginBottom="18dp"
+           android:layout_marginRight="18dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+      <Button
+              android:id="@+id/button_vr"
+              android:textSize="13sp"
+              android:textColor="@android:color/white"
+              android:layout_marginLeft="8dp"
+              android:text="VR"
+              android:paddingLeft="8dp"
+              android:paddingRight="8dp"
+              android:includeFontPadding="false"
+              android:background="@drawable/selector_button_background"
+              android:layout_width="wrap_content"
+              android:layout_height="42dp" />
+
+      <Button
+              android:id="@+id/button_gyr"
+              android:textSize="13sp"
+              android:textColor="@android:color/white"
+              android:layout_marginLeft="8dp"
+              android:text="GYR"
+              android:paddingLeft="8dp"
+              android:paddingRight="8dp"
+              android:includeFontPadding="false"
+              android:background="@drawable/selector_button_background"
+              android:layout_width="wrap_content"
+              android:layout_height="42dp" />
+   </LinearLayout>
+
+
 
 </RelativeLayout>

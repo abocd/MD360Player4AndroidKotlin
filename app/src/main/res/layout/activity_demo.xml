@@ -31,6 +31,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+                android:text="normal"
+                android:layout_weight="1"
+                android:id="@+id/normal_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        <Button
             android:text="asVideo"
             android:layout_weight="1"
             android:id="@+id/video_button"
